@@ -7,6 +7,12 @@ android {
     namespace = "com.aston.astonrecyclerview"
     compileSdk = 34
 
+    configurations.all {
+        resolutionStrategy.dependencySubstitution {
+            substitute(module("org.hamcrest:hamcrest-core:1.1")).using(module("junit:junit:4.10"))
+        }
+    }
+
     defaultConfig {
         applicationId = "com.aston.astonrecyclerview"
         minSdk = 24
@@ -16,6 +22,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
 
     buildTypes {
         release {
@@ -41,7 +48,7 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
@@ -49,4 +56,8 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    implementation("com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava")
+
+    //implementation("com.google.guava:guava:27.0.1-android")
 }
