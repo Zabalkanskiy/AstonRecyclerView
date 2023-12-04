@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/concat_dialog_text_view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/name"
+        app:layout_constraintEnd_toStartOf="@+id/concat_dialog_edit_text_name"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/concat_dialog_edit_text_name"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/your_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/concat_dialog_text_view_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/concat_dialog_text_view_surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/surname"
+        app:layout_constraintEnd_toStartOf="@+id/concat_dialog_edit_text_name"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/concat_dialog_text_view_name" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/concat_dialog_edit_text_surname"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/your_surname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toEndOf="@+id/concat_dialog_text_view_surname"
+        app:layout_constraintTop_toBottomOf="@+id/concat_dialog_edit_text_name" />
+
+    <TextView
+        android:id="@+id/concat_dialog_text_view_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/phone_number_text"
+        app:layout_constraintEnd_toStartOf="@+id/concat_dialog_edit_text_name"
+        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/concat_dialog_text_view_surname" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/concat_dialog_edit_text_phone_number"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        android:hint="@string/your_phone_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toEndOf="@+id/concat_dialog_text_view_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/concat_dialog_edit_text_surname" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/concat_dialog_text_view_phone_number" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

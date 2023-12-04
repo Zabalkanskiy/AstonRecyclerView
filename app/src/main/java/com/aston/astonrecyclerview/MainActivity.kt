@@ -9,6 +9,8 @@ import com.aston.astonrecyclerview.databinding.ActivityMainBinding
 import com.aston.astonrecyclerview.model.RecyclerViewModel
 import com.aston.astonrecyclerview.recycler.MyRecyclerViewAdapter
 import com.aston.astonrecyclerview.repository.RecyclerViewRepository
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import org.apache.tools.ant.taskdefs.Concat
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -22,7 +24,14 @@ class MainActivity : AppCompatActivity() {
         val viewModelFactory = RecyclerViewModelFactory(RecyclerViewRepository())
         recyclerViewModel = ViewModelProvider(this, viewModelFactory).get(RecyclerViewModel::class.java)
 
-        val myRecyclerViewAdapter = MyRecyclerViewAdapter()
+        val myRecyclerViewAdapter = MyRecyclerViewAdapter{ cotact ->
+            if(recyclerViewModel.getTrashOnClickBoolean()){
+                recyclerViewModel.addToDeleteList(cotact)
+            } else {
+                //create AlertDialog and Modification concat
+
+            }
+        }
         binding.mainActivityRecyclerView.adapter = myRecyclerViewAdapter
 
         val repComtacts = recyclerViewModel.getContacts()
@@ -32,15 +41,27 @@ class MainActivity : AppCompatActivity() {
         myRecyclerViewAdapter.submitList(repComtacts)
 
         binding.appCompatImageButton.setOnClickListener {
+            recyclerViewModel.trashOnClickTrue()
             binding.mainActiviytyButtonAddContact.visibility = View.INVISIBLE
             binding.mainActiviytyButtonDelete.visibility = View.VISIBLE
             binding.mainActiviytyButtonCancel.visibility = View.VISIBLE
         }
 
         binding.mainActiviytyButtonCancel.setOnClickListener {
+            recyclerViewModel.trashOnClickFalse()
             binding.mainActiviytyButtonAddContact.visibility = View.VISIBLE
             binding.mainActiviytyButtonDelete.visibility = View.INVISIBLE
             binding.mainActiviytyButtonCancel.visibility = View.INVISIBLE
         }
+
+        binding.mainActiviytyButtonDelete.setOnClickListener {
+
+        }
     }
+
+    fun createAlertDialog(concat: Concat){
+        val dialog = MaterialAlertDialogBuilder(this)
+
+    }
+
 }
