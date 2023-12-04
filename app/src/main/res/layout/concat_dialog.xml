@@ -5,6 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/concat_dialog_text_view_name"
         android:layout_width="wrap_content"
@@ -14,25 +22,25 @@
         app:layout_constraintEnd_toStartOf="@+id/concat_dialog_edit_text_name"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/concat_dialog_edit_text_name"
-        android:layout_width="100dp"
-        android:layout_height="24dp"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:inputType="textPersonName"
         android:hint="@string/your_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/concat_dialog_text_view_name"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <TextView
         android:id="@+id/concat_dialog_text_view_surname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="36dp"
         android:text="@string/surname"
         app:layout_constraintEnd_toStartOf="@+id/concat_dialog_edit_text_name"
         app:layout_constraintHorizontal_bias="0.469"
@@ -41,9 +49,10 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/concat_dialog_edit_text_surname"
-        android:layout_width="100dp"
-        android:layout_height="24dp"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
         android:layout_marginTop="12dp"
+        android:inputType="textPersonName"
         android:hint="@string/your_surname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -54,7 +63,7 @@
         android:id="@+id/concat_dialog_text_view_phone_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="24dp"
         android:text="@string/phone_number_text"
         app:layout_constraintEnd_toStartOf="@+id/concat_dialog_edit_text_name"
         app:layout_constraintHorizontal_bias="0.59"
@@ -63,19 +72,43 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/concat_dialog_edit_text_phone_number"
-        android:layout_width="100dp"
-        android:layout_height="24dp"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:inputType="phone"
         android:hint="@string/your_phone_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.37"
         app:layout_constraintStart_toEndOf="@+id/concat_dialog_text_view_phone_number"
         app:layout_constraintTop_toBottomOf="@+id/concat_dialog_edit_text_surname" />
 
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/concat_dialog_button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/concat_dialog_button_change"
+        app:layout_constraintTop_toBottomOf="@+id/concat_dialog_edit_text_phone_number" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/concat_dialog_button_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/change"
+        app:layout_constraintEnd_toStartOf="@+id/concat_dialog_button_cancel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/concat_dialog_text_view_phone_number" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/concat_dialog_text_view_phone_number" />
+        app:layout_constraintTop_toBottomOf="@+id/concat_dialog_button_cancel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -64,5 +64,12 @@
             app:layout_constraintStart_toEndOf="@+id/main_activiyty_button_add_contact"
             app:layout_constraintTop_toBottomOf="@+id/main_activity_recycler_view" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_activiyty_button_add_contact" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
