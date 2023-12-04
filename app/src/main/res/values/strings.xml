@@ -7,4 +7,9 @@
     <string name="add_contact">Add Contact</string>
     <string name="cancel">cancel</string>
     <string name="delete">delete</string>
+    <string name="your_name">Your name</string>
+    <string name="your_surname">Your surname</string>
+    <string name="name">Name</string>
+    <string name="your_phone_number">Your phone number</string>
+    <string name="phone_number_text">phone number</string>
 </resources>

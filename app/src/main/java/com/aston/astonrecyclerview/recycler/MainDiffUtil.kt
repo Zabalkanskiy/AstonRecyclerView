@@ -1,6 +1,7 @@
 package com.aston.astonrecyclerview.recycler
 
 import androidx.recyclerview.widget.DiffUtil
+
 import com.aston.astonrecyclerview.data.Contact
 
 object MainDiffUtil : DiffUtil.ItemCallback<Contact>(){

@@ -17,4 +17,7 @@ class MyRecyclerViewHolder(itemView: View) : ViewHolder(itemView) {
         surname.text = model.surname
         phoneNumber.text = model.phoneNumber
     }
+    fun onClick(){
+
+    }
 }
