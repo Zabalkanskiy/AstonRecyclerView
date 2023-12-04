@@ -12,4 +12,5 @@
     <string name="name">Name</string>
     <string name="your_phone_number">Your phone number</string>
     <string name="phone_number_text">phone number</string>
+    <string name="change">Change</string>
 </resources>
