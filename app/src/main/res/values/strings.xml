@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Aston Recycler View</string>
+    <string name="name_recycler">name</string>
+    <string name="surname">Surname</string>
+    <string name="phone_number">+9111111111</string>
+    <string name="button">Button</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="cancel">cancel</string>
+    <string name="delete">delete</string>
+    <string name="your_name">Your name</string>
+    <string name="your_surname">Your surname</string>
+    <string name="name">Name</string>
+    <string name="your_phone_number">Your phone number</string>
+    <string name="phone_number_text">phone number</string>
+    <string name="change">Change</string>
 </resources>
